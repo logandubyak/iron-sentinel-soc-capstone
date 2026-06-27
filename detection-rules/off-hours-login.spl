@@ -1,0 +1,1 @@
+index=main source="WinEventLog:Security" EventCode=4624 (date_hour<6 OR date_hour>20)
