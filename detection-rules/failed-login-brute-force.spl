@@ -1,0 +1,1 @@
+index=main EventCode=4625 Account_Name=baduser | bucket _time span=5m | stats count by _time, Account_Name | where count > 5
