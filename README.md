@@ -2,7 +2,7 @@
 
 A simulated multi-stage intrusion against a Windows Server 2022 host, built and investigated end-to-end in a home lab. This project covers the full Tier-1 SOC analyst workflow: SIEM configuration, detection engineering, incident response, threat intelligence, and vulnerability assessment.
 
-**[Watch the demo walkthrough →](LINK_TO_SCREENPAL_HERE)**
+**[Watch the demo walkthrough →](https://somup.com/cO1UYlVnlRk)**
 
 ## Scenario
 
