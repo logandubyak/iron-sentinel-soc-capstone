@@ -1,0 +1,5 @@
+host,port,protocol,service,severity,cvss_score,finding,description,solution
+192.168.56.101,0,tcp,,Critical,10.0,Unsupported Windows OS,The remote host is running a version of Windows that is no longer supported and does not receive security updates.,Upgrade to a supported version of Windows Server.
+192.168.56.101,445,tcp,microsoft-ds,High,8.1,SMBv1 Enabled,"The remote host supports SMBv1, an outdated and insecure protocol vulnerable to several known exploits including EternalBlue.",Disable SMBv1 support and require SMBv2 or higher.
+192.168.56.101,3389,tcp,ms-wbt-server,Medium,5.3,RDP Weak Encryption Method Allowed,"The remote RDP service allows weak encryption methods to be negotiated, exposing sessions to downgrade attacks.",Enforce TLS 1.2 or higher and disable legacy encryption negotiation.
+192.168.56.101,80,tcp,www,Low,2.6,HTTP Server Type and Version,"It is possible to obtain the banner of the remote web server, which discloses version information.",Configure the web server to suppress the Server header.
