@@ -1,0 +1,32 @@
+<?xml version="1.0" ?>
+<NessusClientData_v2>
+  <Report name="Iron Sentinel Lab Scan">
+    <ReportHost name="192.168.56.101">
+      <ReportItem port="445" protocol="tcp" severity="3" pluginName="SMBv1 Enabled" svc_name="microsoft-ds">
+        <cvss_base_score>8.1</cvss_base_score>
+        <description>The remote host supports SMBv1, an outdated and insecure protocol vulnerable to several known exploits including EternalBlue.</description>
+        <solution>Disable SMBv1 support and require SMBv2 or higher.</solution>
+      </ReportItem>
+      <ReportItem port="3389" protocol="tcp" severity="2" pluginName="RDP Weak Encryption Method Allowed" svc_name="ms-wbt-server">
+        <cvss_base_score>5.3</cvss_base_score>
+        <description>The remote RDP service allows weak encryption methods to be negotiated, exposing sessions to downgrade attacks.</description>
+        <solution>Enforce TLS 1.2 or higher and disable legacy encryption negotiation.</solution>
+      </ReportItem>
+      <ReportItem port="0" protocol="tcp" severity="4" pluginName="Unsupported Windows OS" svc_name="">
+        <cvss_base_score>10.0</cvss_base_score>
+        <description>The remote host is running a version of Windows that is no longer supported and does not receive security updates.</description>
+        <solution>Upgrade to a supported version of Windows Server.</solution>
+      </ReportItem>
+      <ReportItem port="80" protocol="tcp" severity="1" pluginName="HTTP Server Type and Version" svc_name="www">
+        <cvss_base_score>2.6</cvss_base_score>
+        <description>It is possible to obtain the banner of the remote web server, which discloses version information.</description>
+        <solution>Configure the web server to suppress the Server header.</solution>
+      </ReportItem>
+      <ReportItem port="0" protocol="icmp" severity="0" pluginName="ICMP Timestamp Request" svc_name="">
+        <cvss_base_score>N/A</cvss_base_score>
+        <description>The remote host responds to ICMP timestamp requests.</description>
+        <solution>Filter ICMP timestamp requests at the network boundary.</solution>
+      </ReportItem>
+    </ReportHost>
+  </Report>
+</NessusClientData_v2>
